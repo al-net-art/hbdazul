@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAYYYYY LETTER</title>
+    <link rel="stylesheet" href="rubixcube.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .btn{
+            background-color:rgb(95,117,143);
+            color:white;
+            width:120px;
+            transition:.3s;
+            text-decoration:none;
+        }
+
+        .btn:hover{
+            background-color:rgb(178,204,220);
+            color:rgb(19, 16, 69);
+            transform:translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- RUBIK'S CUBE INTRO -->
+    <div id="intro">
+
+        <div class="container">
+
+            <div class="rubiks-cube rubiks-cube-1" id="cube">
+            </div>
+
+            <div class="reflection">
+
+                <div class="rubiks-cube rubiks-cube-1" id="reflection">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- REAL WEBSITE CONTENT -->
+    <main id="content">
+
+        <div class="profile-card">
+            <h1>HAPPY BIIIIRTHDAYYYY MY DEARRRRRR</h1>
+        <p>
+            I hope you have a wonderful birthday filled with love, laughter, and joy. May this year bring you endless happiness and success in all your endeavors. You deserve the best on your special day and always. Happy Birthday!
+            I also want to let you know, also I want to express my gratitude for having you in my life. Your presence brings so much positivity and warmth, and I am truly blessed to know you. May your birthday be as amazing as you are, and may all your dreams come true. I want to be with u for the rest of my life, and I will do everything in my power to make you happy. I love you so much, and I can't wait to celebrate this special day with you in real life.
+            Anything you want to do, I will do it with you. I will be your partner in crime, your confidant, and your biggest supporter. I will always be there for you, through thick and thin, and I will never let you down. You are my everything, and I am so grateful to have you in my life.
+            Anything you've done in the past, anything you have already do, you are doing your best. i AM SO PROUD OF YOU. I will always be here to support you, and I will never give up on you. You are my everything, and I will always love you. Happy Birthday, my love!
+        </p>
+        <a class="btn" href="hbdart.html">Click here for a special surprise!</a>
+        </div>
+    </main>
+
+
+    <script>
+
+        function createCube(cube) {
+
+            for (let i = 1; i < 28; i++) {
+
+                const detail = document.createElement("div");
+                detail.className = "detail";
+
+                detail.innerHTML = `
+                    <div class="side front"></div>
+                    <div class="side back"></div>
+                    <div class="side top"></div>
+                    <div class="side bottom"></div>
+                    <div class="side left"></div>
+                    <div class="side right"></div>
+                `;
+
+                cube.appendChild(detail);
+            }
+        }
+
+        createCube(document.getElementById("cube"));
+        createCube(document.getElementById("reflection"));
+
+
+        setTimeout(() => {
+
+            document.getElementById("intro").classList.add("fade-out");
+            document.getElementById("content").classList.add("show");
+
+        }, 4000);
+
+    </script>
+
+</body>
+</html>

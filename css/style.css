@@ -1,0 +1,119 @@
+/* Base Style */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #fafafa;
+    color: #333;
+}
+/* Komponen Visual Gradien & Shadow */
+header {
+    background: linear-gradient(to right, saddlebrown, burlywood);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    animation: slidedown 1s ease-out;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+/* Gradient & Animasi */
+.promo {
+    background: linear-gradient(135deg, #ffe0b2, #ffcc80);
+    padding: 70px 20px;
+    text-align: center;
+    color: #291808;
+    box-shadow: inset 0, 0, 0, 0.2;
+    animation: fadein 1.5s ease;
+}
+.promo h2 {
+    color: #4e342e;
+    font-size: 2rem;
+}
+.promo p {
+    font-size: 1.1rem;
+}
+
+.btn {
+    background-color: #6d4c41;
+    color: white;
+    padding: 12px 20px;
+    box-shadow: none;
+    color: white;
+    border-radius: 25px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: rgb(197, 143, 61);
+    color: #291e13;
+    border: #291808;
+    transform: scale(1.1);
+    font-weight: bold
+}
+
+/* Daftar Produk */
+main {
+    margin: 50px auto;
+    max-width: 900px;
+    text-align: center;
+}
+.book {
+    background: white;
+    display: inline-block;
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s;
+    animation: fadein 1.5s ease;
+}
+.book:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+.book img{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+.book h3{
+    min-height: 50px;
+}
+.old {
+    text-decoration: line-through;
+    color: #888;
+}
+.new {
+    color: #c62828;
+    font-weight: bold;
+}
+footer{
+    background: #4e342e;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* key-frames */
+@keyframes slidedown {
+    from {transform: translateY(-100%); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+@keyframes fadein {
+    from {opacity: 0; scale: 0.95}
+    to {opacity: 1; scale: 1;}
+}
